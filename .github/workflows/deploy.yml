@@ -13,11 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          path: faralpha-assessment
+          path: ./
       
       - name: Install dependencies
         run: npm install
-        working-directory: faralpha-assessment/backend
+        working-directory: backend
 
       - name: Deploy to virtual machine
         uses: appleboy/ssh-action@v1.0.3
