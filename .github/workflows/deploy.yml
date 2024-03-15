@@ -8,13 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: /home/runner/work/faralpha-assessment
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          path: /home/runner/work/faralpha-assessment
 
       - name: Install dependencies
         run: npm install
