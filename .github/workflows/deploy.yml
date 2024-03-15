@@ -23,9 +23,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
-              cd backend
-              git pull origin main
-              npm install
-              node server.js 
-            EOF
+            ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} 'cd backend && \
+            git pull origin main || exit 1 && \
+            npm install || exit 1 && \
+            node server.js || exit 1'
