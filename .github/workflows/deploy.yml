@@ -17,7 +17,7 @@ jobs:
         run: npm install
 
       - name: Deploy to virtual machine
-        uses: pritam-dash/faralpha-assessment@v3
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
