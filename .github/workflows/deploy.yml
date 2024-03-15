@@ -17,7 +17,7 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-        working-directory: backend
+        working-directory: faralpha-assessment/backend
 
       - name: Deploy to virtual machine
         uses: appleboy/ssh-action@v1.0.3
