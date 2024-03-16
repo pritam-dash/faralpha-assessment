@@ -4,4 +4,4 @@ This repository contains a basic backend API built with Node.js and Express.js. 
 
 ## Testing the API
 
-You can test the API by making a GET request to the http://20.2.74.69/sayHello(http://20.2.74.69/sayHello)
+You can test the API by making a GET request to the http://20.2.74.69/sayHello
